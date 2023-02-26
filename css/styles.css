@@ -3,6 +3,7 @@
 --color-primario:#FCB03B;
 --color-secundario:#E92F3D;
 --color-background:#EFF6F5;
+--color-background-sombra:#E92F3D30;
 --color-texto:#A1A5A6;
 --text-defaul:"Open Sans";
 }
@@ -18,6 +19,7 @@
 body{
     background: var(--color-background);
 }
+
 .titulos{
     font-size: 40 px;
     text-align: center;
@@ -123,7 +125,109 @@ body{
 }
 .menu-principal i:hover{
     color: var(--color-secundario);
+    
 }
+
+/*slider de productos*/
+#menu-productos .contenedor-principal{
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 0;
+}
+.contenedor-principal #btn-izquierda,
+.contenedor-principal #btn-derecha{
+    position: absolute;
+    height: 10%;
+    width: 50px;
+    border: none;
+    background: transparent;
+    cursor:pointer ;
+    font-size: 40px;
+    margin: 0 15px;
+    color: var(--color-secundario);
+    z-index: 500;
+    outline: none;
+    transition: all 0.3s;
+
+}
+.contenedor-principal #btn-izquierda:hover,
+.contenedor-principal #btn-derecha:hover{
+    background: var(--color-background-sombra);
+    transform: translateY(5px);
+}
+.contenedor-principal #btn-izquierda{
+    left: 0;
+}
+.contenedor-principal #btn-derecha{
+    right: 0;
+}
+.slider{
+    display: flex;
+    overflow: hidden;
+    height: calc(100vh -80px);
+}
+
+.container-productos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 100%;
+    flex-shrink: 0;
+}
+.descripcion-productos{
+    width: 30%;
+}
+.descripcion-productos h1{
+    font-size: 5vw;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.descripcion-productos h2{
+    text-transform: lowercase;
+    font-size: 2.2vw;
+    font-weight: 100;
+}
+.descripcion-productos p{
+    color: var(--color-texto);
+    font-style: italic;
+    text-align: justify;
+}
+.imagen-productos{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+.imagen-productos img{
+    width: 100%;
+    transform: scale(1.1);
+    transition: all 0.3s;
+}
+.container-productos:hover .imagen-productos img{
+    transform: scale(1.15);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media querys*/
 @media screen and (max-width:650px){
     .menu-principal{
         position: fixed;
