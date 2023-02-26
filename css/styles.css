@@ -297,7 +297,11 @@ body{
     font-style: italic;
     padding:0 20px ;
 }
-
+/*seccion de equipo*/
+#equipo{
+    height: 100vh;
+    display: flex;
+}
 
 /* media querys*/
 
@@ -316,6 +320,19 @@ body{
     .descripcion-productos .btn:hover{
         padding: 10px 30px;
     }
+ /*secccion servicios*/
+ .servicios-container{
+    margin-top: 50px;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-areas:"amor     calidez"
+                        "compañia alarma";
+
+ }
+ .imagen-central{
+    display: none;
+ }
+
+
 }
     
 
