@@ -4,7 +4,7 @@
 --color-secundario:#E92F3D;
 --color-background:#EFF6F5;
 --color-background-sombra:#E92F3D30;
---color-texto:#A1A5A6;
+--color-texto:#727677;
 --text-defaul:"Open Sans";
 }
 
@@ -208,6 +208,94 @@ body{
 .container-productos:hover .imagen-productos img{
     transform: scale(1.15);
 
+}
+/*seccion maullidos */
+#maullidos{
+    height: 100vh;
+    background: #fff;
+    padding: 40px;
+}
+#maullidos-titulos{
+   display: flex; 
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+.servicios-container{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,auto);
+    grid-gap: 30px;
+    grid-template-areas: "amor imagen calidez"
+                        "compañia imagen alarma";
+}
+.calidez{
+    grid-row: calidez;
+    grid-column: calidez;
+}
+.alarma{
+    grid-row: alarma;
+    grid-column: alarma;
+}
+.compañia{
+    grid-row: compañia;
+    grid-column: compañia;
+}
+.amor{
+    grid-row: amor;
+    grid-column: amor;
+}
+.imagen-central{
+    grid-row: imagen;
+    grid-column: imagen;
+    transition: all 0.5s;
+}
+.imagen-central:hover{
+    transform: scale(1.1);
+}
+.items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.items span{
+    width: 95px;
+    font-size: 40px;
+    color:var(--color-secundario);
+    padding: 20px;
+    border: 5px solid #dedede;
+    border-radius: 50%;
+    transition: all 0.5s;
+}
+
+.items span:hover{
+    background: var(--color-secundario);
+    color: #fff;
+}
+.amor span,
+.compañia span{
+    color: var(--color-primario);
+}
+
+.amor span:hover,
+.compañia span:hover{
+    background: var(--color-primario);
+    color: #fff;
+}
+.items .titulo-item{
+    text-transform: uppercase;
+    font-size:15px ;
+    font-weight: 700;
+    text-align: center;
+}
+.items .texto-item{
+    font-size: 14px;
+    color:var(--color-texto) ;
+    text-align: center;
+    font-style: italic;
+    padding:0 20px ;
 }
 
 
