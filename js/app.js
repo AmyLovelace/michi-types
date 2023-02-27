@@ -80,7 +80,8 @@ var btnmenuopen=document.getElementById("btnmenuopen"),
     formulario.addEventListener("submit", validar);
 
 // boton scroll top
-var btnTop = document.getElementById("btn-top")
+var btnTop = document.getElementById("btn-top"),
+    logo=document.getElementById("logo");
 
 //detectamos scroll en pagina web
 window.addEventListener("scroll", function () {
@@ -103,4 +104,8 @@ window.addEventListener("scroll", function () {
 btnTop.addEventListener("click", function () {
     window.scrollTo(0,0);
     
+})
+// detectar evento click en el logo
+logo.addEventListener("click", function () {
+    window.scrollTo(0,0);
 })
