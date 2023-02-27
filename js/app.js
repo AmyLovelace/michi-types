@@ -42,13 +42,33 @@ var btnmenuopen=document.getElementById("btnmenuopen"),
     function validar(e) {
         var inputNombre= document.getElementById("nombre"),
             inputEmail=document.getElementById("email"),
-            inputComents=document.getElementById("comentarios");
+            inputComents=document.getElementById("comentarios"),
+            alertSuccess=document.getElementById("alertSuccess"),
+            alertError=document.getElementById("alertError");
+
         if(inputNombre.value==0|| inputEmail.value==0||inputComents.value==0){
             e.preventDefault();
-            alert("Datos vacios");
+            alertError.classList.remove("hide");
+            alertError.classList.add("show");
+
+            setTimeout(function() {
+            alertError.classList.remove("show");
+            alertError.classList.add("hide");
+                
+            },2000);
+
+
         }else{
             e.preventDefault();
-            alert("Datos enviados");
+            alertSuccess.classList.remove("hide");
+            alertSuccess.classList.add("show");
+
+            setTimeout(function() {
+            alertSuccess.classList.remove("show");
+            alertSuccess.classList.add("hide");
+                
+            },2000);
+
             inputNombre.value="";
             inputEmail.value="";
             inputComents.value="";
