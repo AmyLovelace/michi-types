@@ -777,4 +777,8 @@ footer{
     .sociales-metodo{
         width: 50%;
     }
+    /*boton de ir arriba*/
+    #btn-top{
+        display: none;
+    }
 }
