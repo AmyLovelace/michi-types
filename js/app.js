@@ -97,6 +97,10 @@ window.addEventListener("scroll", function () {
         btnTop.classList.add("scrollFinal");
     }else{
         btnTop.classList.remove("scrollFinal");
-    }
+    }  
+})
+//detectamos evento click en el boton
+btnTop.addEventListener("click", function () {
+    window.scrollTo(0,0);
     
 })
