@@ -79,3 +79,24 @@ var btnmenuopen=document.getElementById("btnmenuopen"),
 //eventos del formulario
     formulario.addEventListener("submit", validar);
 
+// boton scroll top
+var btnTop = document.getElementById("btn-top")
+
+//detectamos scroll en pagina web
+window.addEventListener("scroll", function () {
+    var scroll=this.document.documentElement.scrollTop,
+    fullSize=document.documentElement.offsetHeight,
+    sizeVP=this.document.documentElement.clientHeight;
+
+    if(scroll > 100){
+        btnTop.classList.add("show");
+    }else{btnTop.classList.remove("show")
+    }
+    // modificar elemento cuando llegue a final de pagina
+    if(fullSize==(scroll +sizeVP)){
+        btnTop.classList.add("scrollFinal");
+    }else{
+        btnTop.classList.remove("scrollFinal");
+    }
+    
+})
