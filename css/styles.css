@@ -605,4 +605,15 @@ body{
     .info-ingre .txt-ingre{
         display: none;
     }
+
+    /*contactos*/
+    #formulario{
+        width: 100%;
+    }
+    .two-fiels{
+        flex-direction: column;
+    }
+    .inputConIcon{
+        width: 100%;
+    }
 }
