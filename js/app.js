@@ -35,3 +35,27 @@ var btnmenuopen=document.getElementById("btnmenuopen"),
         contenedor.scrollLeft -= contenedor.offsetWidth;  
           
     });
+
+    //validacion de formulario
+    var formulario= document.getElementById("formulario");
+
+    function validar(e) {
+        var inputNombre= document.getElementById("nombre"),
+            inputEmail=document.getElementById("email"),
+            inputComents=document.getElementById("comentarios");
+        if(inputNombre.value==0|| inputEmail.value==0||inputComents.value==0){
+            e.preventDefault();
+            alert("Datos vacios");
+        }else{
+            e.preventDefault();
+            alert("Datos enviados");
+            inputNombre.value="";
+            inputEmail.value="";
+            inputComents.value="";
+        }
+    }
+
+
+//eventos del formulario
+    formulario.addEventListener("submit", validar);
+
