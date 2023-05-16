@@ -34,7 +34,7 @@ body{
 .subtitulos{
     font-size: 25px;
     font-weight: 400;
-    text-align: center;
+    text-align: left;
     text-transform: uppercase;
     color:var(--color-primario) ;
 }
