@@ -42,7 +42,7 @@ body{
     text-decoration: none;
     text-transform: uppercase;
     font-size: 14px;
-    color:#279e43;
+    color:#000;
     background: var(--color-primario);
     font-weight: 700;
     padding: 15px 30px;
